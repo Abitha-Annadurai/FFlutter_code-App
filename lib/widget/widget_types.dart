@@ -35,7 +35,7 @@ class _WidgetTypesState extends State<WidgetTypes> {
         leading: Padding(padding: EdgeInsets.only(left: 12), child: Image.asset('assest/icon.jpg')),
         actions: [
           TextButton(onPressed: () async {
-           // var url = Uri.parse("https://github.com/Abitha-Annadurai/Flutter_Widget.git");
+            var url = Uri.parse("");
             if(await canLaunchUrl(url) != null){
               await launchUrl(url);
             }else{
