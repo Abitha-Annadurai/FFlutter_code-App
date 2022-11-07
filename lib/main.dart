@@ -2,6 +2,8 @@
 import 'package:ffluttercode/widget/widget_types.dart';
 import 'package:flutter/material.dart';
 
+import 'layput/layout_types.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -40,9 +42,10 @@ class _HomePageState extends State<HomePage> {
       body: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assest/bg1.jpg"),
+              image: AssetImage("assest/bg6.jpg"),
               fit: BoxFit.cover,
             ),
+
           ),
           child: SingleChildScrollView(
             child: Column(
@@ -75,6 +78,19 @@ class _HomePageState extends State<HomePage> {
                           ],
                         ),
                       ),
+                      Container(
+                        padding: EdgeInsets.only(left: 100,),
+                        child: Row(
+                          children: [
+                            TextButton(onPressed: (){
+                              Navigator.of(context).push(MaterialPageRoute(builder: (context) => LayoutTpyes(),),);
+                            },
+                              child: Text('Layout', style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),),
+                            ),
+                          ],
+                        ),
+                      ),
+
 
                     ],
                   ),
