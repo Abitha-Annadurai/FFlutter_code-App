@@ -1,8 +1,10 @@
+import 'package:ffluttercode/layput/sizedbox_code.dart';
+import 'package:ffluttercode/layput/stack_code.dart';
 import 'package:ffluttercode/layput/wrap_code.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import 'container_code.dart';
+import 'expand_code.dart';
 import 'fractionalsizedbox_code.dart';
 
 class LayoutTpyes extends StatefulWidget {
@@ -43,13 +45,28 @@ class _LayoutTpyesState extends State<LayoutTpyes> {
               child: Column(
                 children: [
                   TextButton(onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => WarpCode(),),);
+                  }, child: Text('Wrap',
+                    style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
+                  )),
+                  TextButton(onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => StackCode(),),);
+                  }, child: Text('Stack',
+                    style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
+                  )),
+                  TextButton(onPressed: (){
                     Navigator.of(context).push(MaterialPageRoute(builder: (context) => ContainerCode(),),);
                   }, child: Text('Container',
                     style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
                   )),
                   TextButton(onPressed: (){
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => WarpCode(),),);
-                  }, child: Text('Wrap',
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => ExpandCode(),),);
+                  }, child: Text('Expanded',
+                    style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
+                  )),
+                  TextButton(onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => SizedBoxCode(),),);
+                  }, child: Text('Sized Box',
                     style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
                   )),
                   TextButton(onPressed: (){
@@ -57,6 +74,7 @@ class _LayoutTpyesState extends State<LayoutTpyes> {
                   }, child: Text('Fractional Sized Box',
                     style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
                   )),
+
                 ],
               ),
             ),)

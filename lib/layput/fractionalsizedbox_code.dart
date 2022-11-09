@@ -19,7 +19,9 @@ class _SixedBoxFracState extends State<SixedBoxFrac> {
       body: Center(
           child: Column(
             children: [
+              Spacer(),
               Container(
+                color: Colors.purpleAccent,
                 height: 100,
                 width: 100,
               ),
@@ -28,6 +30,7 @@ class _SixedBoxFracState extends State<SixedBoxFrac> {
                     heightFactor: 0.2,
                   )),
               Container(
+                color: Colors.lightGreen,
                 height: 100,
                 width: 100,
               ),
