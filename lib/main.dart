@@ -40,6 +40,8 @@ class _HomePageState extends State<HomePage> {
         leading: Padding(padding: EdgeInsets.only(left: 12), child: Image.asset('assest/icon.jpg')),
       ),
       body: Container(
+        height: MediaQuery.of(context).size.height,
+        width:  MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage("assest/bg6.jpg"),

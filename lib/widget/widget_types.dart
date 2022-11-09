@@ -45,6 +45,8 @@ class _WidgetTypesState extends State<WidgetTypes> {
         ],
       ),
       body: Container(
+          height: MediaQuery.of(context).size.height,
+          width:  MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assest/bg1.jpg"),

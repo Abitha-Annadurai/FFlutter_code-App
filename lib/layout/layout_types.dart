@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../layout/container_code.dart';
 import 'expand_code.dart';
 import '../layout/fractionalsizedbox_code.dart';
@@ -21,6 +22,16 @@ class _LayoutTpyesState extends State<LayoutTpyes> {
         backgroundColor: Colors.white,
         title: Text('Layouts', style: TextStyle(color: Colors.black, fontSize: 20 ),),
         leading: Padding(padding: EdgeInsets.only(left: 12), child: Image.asset('assest/icon.jpg')),
+        actions: [
+          TextButton(onPressed: () async {
+            var url = Uri.parse("https://github.com/Abitha-Annadurai/Flutter_Layouts.git");
+            if(await canLaunchUrl(url) != null){
+              await launchUrl(url);
+            }else{
+              throw "Cannot Load";
+            }
+          }, child: Text('Code', style: TextStyle(color: Colors.black),))
+        ],
       ),
       body: Container(
           height: MediaQuery.of(context).size.height,
