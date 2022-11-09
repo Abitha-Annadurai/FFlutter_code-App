@@ -1,11 +1,10 @@
-import 'package:ffluttercode/layput/sizedbox_code.dart';
-import 'package:ffluttercode/layput/stack_code.dart';
-import 'package:ffluttercode/layput/wrap_code.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'container_code.dart';
+import '../layout/container_code.dart';
 import 'expand_code.dart';
-import 'fractionalsizedbox_code.dart';
+import '../layout/fractionalsizedbox_code.dart';
+import 'sizedbox_code.dart';
+import 'stack_code.dart';
+import 'wrap_code.dart';
 
 class LayoutTpyes extends StatefulWidget {
   const LayoutTpyes({Key? key}) : super(key: key);
@@ -22,18 +21,10 @@ class _LayoutTpyesState extends State<LayoutTpyes> {
         backgroundColor: Colors.white,
         title: Text('Layouts', style: TextStyle(color: Colors.black, fontSize: 20 ),),
         leading: Padding(padding: EdgeInsets.only(left: 12), child: Image.asset('assest/icon.jpg')),
-        actions: [
-          TextButton(onPressed: () async {
-            var url = Uri.parse("");
-            if(await canLaunchUrl(url) != null){
-              await launchUrl(url);
-            }else{
-              throw "Cannot Load";
-            }
-          }, child: Text('Code', style: TextStyle(color: Colors.black),))
-        ],
       ),
       body: Container(
+          height: MediaQuery.of(context).size.height,
+          width:  MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage("assest/bg1.jpg"),

@@ -2,7 +2,7 @@
 import 'package:ffluttercode/widget/widget_types.dart';
 import 'package:flutter/material.dart';
 
-import 'layput/layout_types.dart';
+import 'layout/layout_types.dart';
 
 void main() {
   runApp(const MyApp());
