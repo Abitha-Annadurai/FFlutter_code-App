@@ -1,8 +1,8 @@
 // @dart=2.9
 import 'package:ffluttercode/widget/widget_types.dart';
 import 'package:flutter/material.dart';
-
 import 'layout/layout_types.dart';
+import 'list/List_types.dart';
 
 void main() {
   runApp(const MyApp());
@@ -69,7 +69,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.only(left: 50,),
+                        padding: EdgeInsets.only(left: 40,),
                         child: Row(
                           children: [
                             TextButton(onPressed: (){
@@ -81,7 +81,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.only(left: 100,),
+                        padding: EdgeInsets.only(left: 80,),
                         child: Row(
                           children: [
                             TextButton(onPressed: (){
@@ -93,7 +93,18 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
 
-
+                      Container(
+                        padding: EdgeInsets.only(left: 120,),
+                        child: Row(
+                          children: [
+                            TextButton(onPressed: (){
+                              Navigator.of(context).push(MaterialPageRoute(builder: (context) => ListTypes(),),);
+                            },
+                              child: Text('Lists', style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),),
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
               ],

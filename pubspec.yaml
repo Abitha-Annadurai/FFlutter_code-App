@@ -36,7 +36,8 @@ dependencies:
   flutter_gradients: ^1.0.0+3
   transparent_image: ^2.0.0
   cached_network_image: ^3.2.1
-  extended_image: ^6.2.1
+  extended_image: ^6.3.2
+  badges: ^2.0.3
 
 flutter_icons:
   android: "launcher_icon"
